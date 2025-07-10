@@ -17,9 +17,8 @@ public class Rules {
     public Rules(String filename) {
         this.filename = filename;
         ExtensionReading(filename);
-
     }
-
+    
     // reading the file ext first
     protected boolean ExtensionReading(String filename) {
         if (!filename.toLowerCase().endsWith(".txt")) {
