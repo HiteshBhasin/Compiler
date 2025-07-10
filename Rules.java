@@ -62,7 +62,7 @@ Tokenizer tokenizer =  new Tokenizer(filename);
         }
 
         if(flag && !line.trim().isEmpty()){
-
+            String [] text =
         }
 
         textReader.close();
