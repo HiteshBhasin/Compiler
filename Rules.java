@@ -40,15 +40,16 @@ Tokenizer tokenizer =  new Tokenizer(filename);
     private String tokens;
     private String strRegex;
 
-    public Tokenizer(String filename){
-        strRegex="";
-        tokens = "";
+    public Tokenizer(String tokens, String strRegex){
+        this.strRegex=strRegex;
+        this.tokens = tokens;
     }
 
     public List<Tokenizer> readingFile(String file) throws IOException {
 //        checking the rules and the beginning of the files
         String line="";
         boolean flag=false;
+        List<Tokenizer> tokenList = new ArrayList<>();
         BufferedReader textReader =  new BufferedReader(new FileReader(file));
         while (textReader.ready()){
             line=textReader.readLine();
@@ -62,12 +63,15 @@ Tokenizer tokenizer =  new Tokenizer(filename);
         }
 
         if(flag && !line.trim().isEmpty()){
-
+            String [] text = line.trim().split("\\s+");
+            strRegex = text[0];
+            tokens = text[1];
+            tokenList.add(new Tokenizer(tokens, strRegex));
         }
 
         textReader.close();
 
-        return List.of();
+        return tokenList;
     }
   }
 
