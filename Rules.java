@@ -15,7 +15,7 @@ private final String filename;
 public Rules(String filename ){
 this.filename = filename;
 ExtensionReading(filename);
-Tokenizer tokenizer =  new Tokenizer();
+Tokenizer tokenizer =  new Tokenizer(filename);
 }
 
 // reading the file ext first
@@ -65,7 +65,7 @@ Tokenizer tokenizer =  new Tokenizer();
 
         }
 
-
+        textReader.close();
 
         return List.of();
     }
