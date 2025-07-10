@@ -63,10 +63,7 @@ Tokenizer tokenizer =  new Tokenizer(filename);
         }
 
         if(flag && !line.trim().isEmpty()){
-            String [] text = line.trim().split("\\s+");
-            strRegex = text[0];
-            tokens = text[1];
-            tokenList.add(new Tokenizer(tokens, strRegex));
+
         }
 
         textReader.close();
