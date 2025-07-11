@@ -75,7 +75,15 @@ public class NFA {
             }
 
             if (c=='.'){
-                
+                State concStateStart =  new State();
+                State conStateAccState =  new State();
+
+                concStateStart.isFinal = true;
+                concStateStart.addEpsilon(alphaStartState);
+               conStateAccState.addEpsilon(alphaAcceptState);
+
+
+
             }
              }
 
