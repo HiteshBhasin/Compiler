@@ -83,9 +83,7 @@ public class NFA {
              }
 
              }
-        
-
-             
+              
     }
 
     public void NfaToDfaConversion(){}
