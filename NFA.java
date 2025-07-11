@@ -1,6 +1,4 @@
 public class NFA {
-<<<<<<< HEAD
-
 
    private State start;
    private State accept;
@@ -94,7 +92,4 @@ public class NFA {
 
 
 }
-=======
-    
-}
->>>>>>> 5998091da35ff7b58adda4c131a9ed60b4bdc4cb
+
