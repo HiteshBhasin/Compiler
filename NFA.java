@@ -18,11 +18,11 @@ public class NFA {
         char [] charArray = regex.toCharArray();
         for (char c: charArray) {
              if(Character.isAlphabetic(c)){
-                start  = new State();
-                accept =  new State();
-                accept.isFinal =true;
-                start.addTransition(c, accept);
-                newChar.push(new NFA(start, accept));
+                State localStart  = new State();
+                State localAccept =  new State();
+                localAccept.isFinal =true;
+                localStart.addTransition(c, localAccept);
+                newChar.push(new NFA(localStart, localAccept));
 
              }
         }
