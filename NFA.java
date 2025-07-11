@@ -73,11 +73,17 @@ public class NFA {
                  * 
                  */
             }
+
+            if (c=='.'){
+                
+            }
              }
 
              }
         
     }
+
+    public void NfaToDfaConversion(){}
    
 
 
