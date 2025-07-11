@@ -30,7 +30,7 @@ public class NFA {
 
                 starAcceptState.isFinal=true;
                 starStartSate.addEpsilon(alphaStartState);//epsilon transition to start
-                 starStartSate.addEpsilon(starAcceptState);//epsilon accept (for 0 repition) it goes strait to the accept state.
+                starStartSate.addEpsilon(starAcceptState);//epsilon accept (for 0 repition) it goes strait to the accept state.skipping 'a'.This is what makes a* accpt empty string
 
                 alphaAcceptState.addEpsilon(alphaStartState); // loop back to the state q1 or q0
                 alphaAcceptState.addEpsilon(starAcceptState); // this is the last state in NFA when like a->b->epsilon hence, nothing after b.
@@ -67,7 +67,9 @@ public class NFA {
                         /             \
                         ε             ε
                     [accept]         [accept]
-
+                         \           /
+                          \ε       ε/
+                         [unionAccept]- common accept
                  * 
                  */
             }
@@ -75,9 +77,6 @@ public class NFA {
 
              }
         
-       
-
-
     }
    
 
